@@ -6,7 +6,7 @@ GROUP="$USER"
 NODE_ENV="production"
 APP_DIR="/home/hniroot/HNI-apps/onehni-neocon"
 NODE_APP="polyserve"
-KWARGS="-H 52.173.241.153"
+KWARGS="-H 0.0.0.0"
 CONFIG_DIR="/usr/local/lib/node_modules/polyserve/bin/"
 PID_DIR="$APP_DIR/pid"
 PID_FILE="$PID_DIR/$APP_NAME.pid"
@@ -67,7 +67,7 @@ stop_process() {
 
 remove_pid_file() {
     echo "Removing pid file"
-    rm -f "$PID_FILE"
+    sudo rm -f "$PID_FILE"
 }
 
 start_app() {
